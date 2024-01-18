@@ -1,3 +1,4 @@
+import Counter from "./Counter";
 
 
 function Products() {
@@ -19,6 +20,7 @@ function Products() {
     <div>
       <h1>List of products </h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+      <Counter />
       { 
       show  &&(
           <ul>
