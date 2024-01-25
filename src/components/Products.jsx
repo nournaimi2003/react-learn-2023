@@ -1,19 +1,20 @@
 import Counter from "./Counter";
+import Product from "./product";
 
 
 function Products() {
-  let products =[
+  let products = [
     {
-      id : 1,
-      label : "iphone 13",
-      price : 2900,
+      id: 1,
+      label: "iphone 13",
+      price: 2900,
     },
     {
-      id : 2,
-      label : "Samsung",
-      price : 1200,
-    }
-  ]
+      id: 2,
+      label: "Samsung",
+      price: 1200,
+    },
+  ];
   let show = true;
 
   return (
@@ -21,20 +22,17 @@ function Products() {
       <h1>List of products </h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
       <Counter />
-      { 
-      show  &&(
-          <ul>
-          {products.map((product)=> (
-            <li key={product.id}>{ product.label }</li>
-          ))
-          }
-        </ul>)
-        
-      }
-    
-
+      {show && (
+        <div>
+          {products.map((product, index) => (
+            <div key={index}>
+              <Product  data ={product} />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Products
+export default Products;
